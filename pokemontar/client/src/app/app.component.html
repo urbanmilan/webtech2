@@ -1,0 +1,36 @@
+<div class="example-container">
+	<mat-toolbar color="primary" class="example-toolbar">
+		<mat-toolbar-row class="nav-bar">
+			<h1 class="example-app-name">Pokemon database</h1>
+
+			<span class="example-spacer"></span>
+
+			<a
+				mat-button
+				[class]="linkEnabled ? 'isactive' : 'isdisabled'"
+				[routerLink]="linkEnabled ? '/trainer-list' : 'null'"
+			>
+				<mat-icon>people</mat-icon> <span class="icon">Trainers</span>
+			</a>
+			<a
+				mat-button
+				[class]="linkEnabled ? 'isactive' : 'isdisabled'"
+				[routerLink]="linkEnabled ? '/pokemon-list' : 'null'"
+			>
+				<mat-icon>android</mat-icon> <span>NORMAL/GROUND</span></a
+			>
+			<a
+				mat-button
+				[class]="linkEnabled ? 'isactive' : 'isdisabled'"
+				[routerLink]="linkEnabled ? '/tournament-list' : 'null'"
+			>
+				<mat-icon>event</mat-icon> <span>Tournaments</span></a
+			>
+		</mat-toolbar-row>
+	</mat-toolbar>
+	<mat-sidenav-container class="container">
+		<mat-sidenav-content>
+			<router-outlet></router-outlet>
+		</mat-sidenav-content>
+	</mat-sidenav-container>
+</div>
